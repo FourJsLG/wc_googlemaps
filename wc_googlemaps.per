@@ -1,0 +1,36 @@
+LAYOUT
+GRID
+{
+<GROUP g1                                               >
+[l1         |t1                                        ]
+[l2                                                    ]
+[be1                                                   ]
+[l3                                                    ]
+
+<GROUP g2                                               >
+[wc1                                                   ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+[                                                      ]
+}
+END
+END
+ATTRIBUTES
+GROUP g1: group1, TEXT="Criterias";
+GROUP g2: group2, TEXT="Map";
+LABEL t1 = formonly.loc_title, COLOR=red;
+LABEL l1: label1, TEXT="You are looking at : ";
+LABEL l2: label2, TEXT="Pick a different location using key words below"; 
+LABEL l3: label3, TEXT="Examples => \'Eiffel+Tower+Paris+France\', \'Tulum+Temple+Mexico\', 'Strasbourg+Cathedral\'";
+
+BUTTONEDIT be1 = formonly.loc_pick, IMAGE="mag", ACTION=googlemapsearch;
+WEBCOMPONENT wc1 = FORMONLY.loc_map, SIZEPOLICY=INITIAL, HEIGHT=40, WIDTH=120, STRETCH=BOTH; --without COMPONENTTYPE, with STRETCH BOTH
+
+END
