@@ -30,16 +30,27 @@ MAIN
     INPUT BY NAME loc_rec.* WITHOUT DEFAULTS ATTRIBUTES(UNBUFFERED)
 
           BEFORE INPUT
-            CALL ui.Interface.frontCall("webcomponent", "call",["formonly.loc_map", "eval", "document.title"],[title] )
-            LET loc_rec.loc_title = title
-
+             TRY
+              CALL ui.Interface.frontCall("webcomponent", "call",["formonly.loc_map", "eval", "document.title"],[title] )
+              LET loc_rec.loc_title = title
+             CATCH
+              MESSAGE "Wecomponent frontcall didn't execute correctly"
+              LET loc_rec.loc_title = "Google Maps API"
+            END TRY
+             
           ON ACTION googlemapsearch
             LET loc_rec.loc_map = c_gmaps_with_apikey || "&q=" || loc_rec.loc_pick
             NEXT FIELD loc_map
           ON CHANGE loc_map
-            --
-            CALL ui.Interface.frontCall("webcomponent", "getTitle",["formonly.loc_map"], [title] )
-            LET loc_rec.loc_title = title
+            TRY
+              --CALL ui.Interface.frontCall("webcomponent", "getTitle",["formonly.loc_map"], [title] )
+              CALL ui.Interface.frontCall("webcomponent", "call",["formonly.loc_map", "eval", "document.title"],[title] )
+              LET loc_rec.loc_title = title
+            CATCH
+              MESSAGE "Wecomponent frontcall didn't execute correctly"
+              LET loc_rec.loc_title = "Google Maps API"
+            END TRY
+            
 
           --ON ACTION cancel
             

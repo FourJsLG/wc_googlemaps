@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<APPLICATION Parent="defaultgwc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.4js.com/ns/gas/3.10/cfextwa.xsd">
+  <EXECUTION>
+    <PATH>/tmp/lg</PATH>
+    <MODULE>wc_googlemaps_test.42r</MODULE>
+  </EXECUTION>
+</APPLICATION>

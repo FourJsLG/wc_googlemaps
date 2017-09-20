@@ -5,6 +5,10 @@
     <Node path="wc_googlemaps.4pw/wc_googlemaps" type="pm/group"/>
     <Node path="wc_googlemaps.4pw/wc_googlemaps/wc_googlemaps_test" type="pm/application"/>
   </ExpandedNodes>
-  <OpenDocuments/>
-  <CurrentDocument filePath="" module="mod-wp"/>
+  <OpenDocuments>
+    <Document container="true" filePath="wc_googlemaps.4gl" locator="34:13" module="mod-ce3">
+      <Data name="8" value="UTF-8"/>
+    </Document>
+  </OpenDocuments>
+  <CurrentDocument filePath="wc_googlemaps.4gl" module="mod-ce3"/>
 </WorkspaceViewState>

@@ -61,7 +61,6 @@
   <LanguageList version="1.0"/>
   <PlatformList version="1.0"/>
   <Group label="wc_googlemaps" language="Genero" targetDirectory="$(ProjectDir)">
-    <Library binaryName="wc_googlemaps" dependencies="1986" id="14000" label="wc_googlemaps" targetDirectory="$(ProjectDir)"/>
     <Application binaryName="wc_googlemaps_test" dependencies="14000,1986" id="18736" label="wc_googlemaps_test" targetDirectory="$(ProjectDir)">
       <File filePath="wc_googlemaps.4gl"/>
       <File filePath="wc_googlemaps.per"/>
